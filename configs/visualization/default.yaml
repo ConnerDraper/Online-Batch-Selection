@@ -9,7 +9,10 @@
 #
 # embedding_methods accepts any name registered in
 # visualization/embedding_methods/ — built-in: "umap", "tsne".
-# Register custom methods with @visualization.register("name").
+# Register custom methods with:
+#   from visualization.embedding_methods import register, EmbeddingMethod
+#   @register("mymethod")
+#   class MyMethod(EmbeddingMethod): ...
 
 visualization:
   enable: true

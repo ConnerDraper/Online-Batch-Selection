@@ -6,8 +6,10 @@ t-SNE-based 2-D dimensionality reduction, registered under the name "tsne".
 
 import numpy as np
 from .base import EmbeddingMethod
+from .registry import register
 
 
+@register("tsne")
 class TSNEMethod(EmbeddingMethod):
     """
     t-SNE dimensionality reduction (via ``sklearn.manifold.TSNE``).

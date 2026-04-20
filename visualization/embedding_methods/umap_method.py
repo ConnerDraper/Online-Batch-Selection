@@ -6,8 +6,10 @@ UMAP-based 2-D dimensionality reduction, registered under the name "umap".
 
 import numpy as np
 from .base import EmbeddingMethod
+from .registry import register
 
 
+@register("umap")
 class UMAPMethod(EmbeddingMethod):
     """
     UMAP dimensionality reduction (requires ``umap-learn``).
